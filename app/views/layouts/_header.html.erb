@@ -1,0 +1,40 @@
+  <div id="page-top">
+    <div id="header-wrapper">
+      <!-- Begin Header -->
+      <div id="header">
+        <div id="logo"><a href="index.html"><img src="/images/logo.png" alt="Delphic" /></a></div>
+        <!-- Logo -->
+					<div id = "user_field" >
+						<%if user_signed_in? %>
+							<p>
+								Welcome <%= current_user.email %>&nbsp!&nbsp <%= link_to "Log out", destroy_user_session_path, :method => 'delete' %><br /><br />
+								<span>Available Credits : 300 <a href="#">Buy credits</a></span>
+						</p>
+						<% else %>
+							<%= render "devise/sessions/new" %><br />
+							<span><%= link_to "Not a Member? Sign Up for Free.", new_user_registration_path %></span>
+						<% end %>
+					</div>
+      </div>
+      <!-- End Header -->
+    </div>
+    <!-- Begin Menu -->
+        <div id="menu-wrapper">
+          <div id="smoothmenu1" class="ddsmoothmenu">
+            <ul>
+              <li><a href="index.html" class="selected">Home</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="page-custom.html">Others</a>
+                <ul>
+                  <li><a href="page-custom.html">Full Width Page</a></li>
+                  <li><a href="page-buttons.html">Buttons</a></li>
+                </ul>
+              </li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- End Menu -->
+  </div>
+

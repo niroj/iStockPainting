@@ -7,10 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id = "container">
+	<%= render "layouts/header" %>
   <!-- <p class="notice"><%= notice %></p>
          <p class="alert"><%= alert %></p> -->
+	<div id = "wrapper">
+		<%= yield %>
+	</div>
 
-<%= yield %>
+	<%= render "layouts/footer" %>
+
+</div>
 
 </body>
 </html>
+

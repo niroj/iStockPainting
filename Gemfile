@@ -5,6 +5,9 @@ gem 'rails', '3.1.3'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
+gem 'execjs'
+gem 'therubyracer'
+
 gem 'sqlite3'
 gem 'devise'
 gem 'carrierwave'
@@ -48,7 +51,7 @@ group :test do
 
   gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
   gem 'guard-rspec'
-  
+
   # Pretty printed test output
   gem 'turn', '0.8.2', :require => false
   gem 'rspec'

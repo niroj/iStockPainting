@@ -1,0 +1,15 @@
+#user_field{
+	float: right;
+	padding: 16px;
+}
+#user_field #user_email, #user_password{
+	width:150px;
+}
+#user_field span{
+	float: right;
+	padding: 0px 4px 0px 0px;
+}
+#user_field p{
+	font-size: 1.1em;
+}
+
