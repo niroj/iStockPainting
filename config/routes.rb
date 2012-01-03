@@ -5,11 +5,13 @@ IstockpaintingV10::Application.routes.draw do
 
   get "home/index"
 
-  devise_for :users do
-    match '/user' => "paintings#index", :as => :user_root
-  end
+  devise_for :users
   
-  resources :paintings
+  resources :paintings do
+    member do
+      get "buy"
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

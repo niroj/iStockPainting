@@ -1,0 +1,6 @@
+<% if(current_user.credits > @painting.credits) %>
+  $("#show_credits").html("<%= @painting.credits %>");
+  window.location.replace("/paintings")
+<% else %>
+  alert("Not Enough Credits. Click here to buy");
+<% end %>

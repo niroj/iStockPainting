@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120103060812) do
+ActiveRecord::Schema.define(:version => 20120103102947) do
 
   create_table "paintings", :force => true do |t|
     t.string   "title"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20120103060812) do
     t.datetime "updated_at"
     t.string   "image"
     t.text     "inspiration"
+    t.boolean  "status",      :default => true
   end
 
   add_index "paintings", ["user_id"], :name => "index_paintings_on_user_id"
