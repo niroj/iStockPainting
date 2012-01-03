@@ -124,7 +124,7 @@ p {
 
 a {
 	text-decoration: none;
-	color: green;
+	color: #565656;
 }
 
 a:hover {
@@ -602,7 +602,7 @@ em {
 	display:block;
 	height:460px;
 	overflow:hidden;
-	margin: -10px auto 40px;
+	margin: -10px auto 30px;
 	width: 960px;
 }
 
@@ -615,11 +615,12 @@ em {
 }
 
 .one-third {
-	width:30.66%;
+	width:25.66%;
+	float:left;
 }
 
 .two-third {
-	width:65.33%;
+	width:65.33%;c
 }
 
 .one-fourth {
@@ -679,8 +680,8 @@ em {
 }
 
 .intro {
-	margin-top: -10px;
-	margin-bottom:60px;
+	margin-top: 0px;
+	margin-bottom:30px;
 }
 
 /*-----------------------------------------------------------------------------------*/

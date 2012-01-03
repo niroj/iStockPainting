@@ -1,0 +1,14 @@
+<div id="paintings">
+  <% @paintings.each do |painting| %>
+    <div class="painting">
+      <%= image_tag painting.image_url(:thumb) if painting.image? %>
+      <div class="name"><%= painting.title %></div>
+      <div class="actions">
+        <%= link_to "edit", edit_painting_path(painting) %> |
+        <%= link_to "remove", painting, :confirm => 'Are you sure?', :method => :delete %>
+      </div>
+    </div>
+  <% end %>
+  <div class="clear"></div>
+</div>
+<%= render "sidebar" %>

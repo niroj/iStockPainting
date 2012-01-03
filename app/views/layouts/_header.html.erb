@@ -7,7 +7,7 @@
 					<div id = "user_field" >
 						<%if user_signed_in? %>
 							<p>
-								Welcome <%= current_user.email %>&nbsp!&nbsp <%= link_to "Log out", destroy_user_session_path, :method => 'delete' %><br /><br />
+								Welcome <%= current_user.email %>&nbsp;!&nbsp; <%= link_to "Log out", destroy_user_session_path, :method => 'delete' %><br /><br />
 								<span>Available Credits : 300 <a href="#">Buy credits</a></span>
 						</p>
 						<% else %>
@@ -22,19 +22,17 @@
         <div id="menu-wrapper">
           <div id="smoothmenu1" class="ddsmoothmenu">
             <ul>
-              <li><a href="index.html" class="selected">Home</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="page-custom.html">Others</a>
-                <ul>
-                  <li><a href="page-custom.html">Full Width Page</a></li>
-                  <li><a href="page-buttons.html">Buttons</a></li>
-                </ul>
-              </li>
-              <li><a href="contact.html">Contact</a></li>
+              <%if user_signed_in? %>
+                <li><%= link_to "Home", root_path, :class => "selected" %></li>
+                <li><%= link_to "Upload Painting", new_painting_path %></li>
+              <% else %>
+              <li><%= link_to "Browse Photos", home_index_path, :class => "selected" %></li>
+              <li><a href="portfolio.html">Take a Tour</a></li>
+              <li><a href="services.html">Who we are?</a></li>
+              <% end %>
+              <li><a href="/home/contact.html">Contact Us</a></li>             
             </ul>
           </div>
         </div>
         <!-- End Menu -->
   </div>
-
