@@ -9,6 +9,6 @@
 //= require_tree .
 $(document).ready(function(){
   $("#buy a").live("click",function(){
-    confirm("do you want really buy?");
+    if(confirm("do you want really buy?")){}
   });
 });
